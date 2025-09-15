@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "./transitions.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@layer base {
+    body {
+        background-color: whitesmoke;
+        font-family: "Roboto", sans-serif;
+        color: #171717;
+    }
+
+    button {
+        @apply cursor-pointer
+    }
+}
+
+@layer components {
+    .button-filter {
+        @apply w-full flex items-center justify-center px-6 py-2 rounded-xl bg-green-300 hover:bg-green-500/50
+    }
+
+    .slider {
+        @apply appearance-none w-full h-2 rounded-full bg-neutral-300 outline-none
+    }
+
+    .slider::-webkit-slider-thumb {
+        @apply appearance-none size-6 rounded-full bg-green-300 cursor-pointer transition duration-300 ease-in-out
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+        @apply shadow-[0_0_0_.5rem] shadow-neutral-400/30
+    }
+
+    .slider::-moz-range-thumb {
+        @apply size-6 bg-green-300 cursor-pointer
+    }
+    
+}
